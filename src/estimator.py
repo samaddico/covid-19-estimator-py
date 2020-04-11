@@ -15,8 +15,8 @@ def estimator(data):
         time_to_elapse=data.get("timeToElapse")
     )
 
-    cases = infections_per_time * 0.15
-    severe_cases = severe_infections_per_time * 0.15
+    cases = int(infections_per_time * 0.15)
+    severe_cases = int(severe_infections_per_time * 0.15)
 
     available_beds_for_cases = __get_available_hospital_beds(
         data.get("totalHospitalBeds"),
