@@ -116,14 +116,14 @@ def __get_available_hospital_beds(beds_count, cases):
     :return: number of available beds.
     """
     available_beds = 0.35 * beds_count
-    return int(available_beds) - cases
+    return int(available_beds - cases)
 
 
 def __get_money_loss(percentage, avg_income, days, infections):
     """
     Calculates money to be losed in the economy.
 
-    :param percentage:
+    :param percentage: percentage of populaton that earn `avg_income`.
     :param avg_income: the average income of infected.
     :param days: period of infection.
     :param infections: number of infectionds per time.
